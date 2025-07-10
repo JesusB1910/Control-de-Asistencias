@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Estudiante - Control de Asistencia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-user-graduate"></i> App Estudiante</h1>
+            <p>Sistema de registro de asistencia mediante códigos QR</p>
+        </header>
+        
+        <div class="panel">
+            <div class="app-header">
+                <div class="user-info">
+                    <div class="avatar">JB</div>
+                    <div class="user-details">
+                        <h3>Jesus Bellorin</h3>
+                        <p>Matrícula: LAR-II-2025| Ingeniería de Computacion.
+                        </p>
+                    </div>
+                </div>
+                <div class="attendance-status">
+                    <i class="fas fa-check-circle"></i> Asistencia: 92%
+                </div>
+            </div>
+            
+            <div class="scanner-section">
+                <h3><i class="fas fa-camera"></i> Escáner de Asistencia</h3>
+                <div class="scanner-box">
+                    <div class="scanner-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                </div>
+                <button class="btn btn-scan" id="scanBtn">
+                    <i class="fas fa-camera"></i> Escanear Código QR
+                </button>
+            </div>
+            
+            <div class="schedule">
+                <h3><i class="fas fa-calendar-alt"></i> Horario de Hoy</h3>
+                
+                <div class="schedule-item">
+                    <div class="class-time">08:00 - 10:00</div>
+                    <div class="class-info">
+                        <div class="class-name">Aplicaciones Moviles</div>
+                        <div class="class-room">Aula: Lab-1</div>
+                    </div>
+                </div>
+                
+                <div class="schedule-item">
+                    <div class="class-time">10:30 - 12:00</div>
+                    <div class="class-info">
+                        <div class="class-name">Desarrollo de Entornos Web</div>
+                        <div class="class-room">Aula: D-6</div>
+                    </div>
+                </div>
+                
+                <div class="schedule-item">
+                    <div class="class-time">14:00 - 16:00</div>
+                    <div class="class-info">
+                        <div class="class-name">Proyecto de investigacion</div>
+                        <div class="class-room">Aula: D-3</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="attendance-history">
+                <h3><i class="fas fa-history"></i> Historial de Asistencia</h3>
+                <div class="attendance-item">
+                    <span class="attendance-course">Aplicaciones Moviles</span>
+                    <span class="attendance-status" style="color:#2ecc71;">Presente</span>
+                </div>
+                <div class="attendance-item">
+                    <span class="attendance-course">Desarrollo de Entornos Web</span>
+                    <span class="attendance-status" style="color:#e74c3c;">Ausente</span>
+                </div>
+                <div class="attendance-item">
+                    <span class="attendance-course">Proyecto de investigacion</span>
+                    <span class="attendance-status" style="color:#2ecc71;">Presente</span>
+                </div>
+                <div class="attendance-item">
+                    <span class="attendance-course">Sistemas de Informacion II</span>
+                    <span class="attendance-status" style="color:#2ecc71;">Presente</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i> ¡Asistencia registrada correctamente!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

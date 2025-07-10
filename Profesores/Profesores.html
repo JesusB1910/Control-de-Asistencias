@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Profesor - Control de Asistencia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chalkboard-teacher"></i> Panel del Profesor</h1>
+            <p>Generador de códigos QR para asistencia</p>
+        </header>
+        
+        <div class="panel qr-generator">
+            <h2>Generar Código QR</h2>
+            
+            <div class="form-group">
+                <label for="classSelect">Seleccionar Materia</label>
+                <select id="classSelect">
+                    <option value="calculo">Aplcaiones Moviles</option>
+                    <option value="fisica">Calculo I</option>
+                    <option value="programacion">Programación Avanzada</option>
+                    <option value="algebra">Álgebra Lineal</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="classroom">Aula</label>
+                </select>
+                <input type="text" id="classroom" value="Lab-1">
+            </div>
+            
+            <div class="form-group">
+                <label for="classTime">Hora de Clase</label>
+                <input type="text" id="classTime" value="08:00 - 10:00">
+            </div>
+            
+            <button class="btn btn-generate" id="generateBtn">
+                <i class="fas fa-sync-alt"></i> Generar Nuevo Código QR
+            </button>
+            
+            <div class="qr-display">
+                <h3>Código QR para la Clase</h3>
+                <div id="qrCode"></div>
+                <div class="qr-info">
+                    <p><strong>Materia:</strong> Aplicaciones Moviles</p>
+                    <p><strong>Aula:</strong> Lab-1</p>
+                    <p><strong>Hora:</strong> 08:00 - 10:00</p>
+                    <p><strong>Válido hasta:</strong> 10:15 AM</p>
+                </div>
+            </div>
+            
+            <div class="attendance-list">
+                <h3><i class="fas fa-user-check"></i> Asistencia Actual</h3>
+                <div class="student-item">
+                    <span class="student-name">Jesus Bellorin</span>
+                    <span class="attendance-status">Presente</span>
+                </div>
+                <div class="student-item">
+                    <span class="student-name">Carlos Rodríguez</span>
+                    <span class="attendance-status">Presente</span>
+                </div>
+                <div class="student-item">
+                    <span class="student-name">María Fernández</span>
+                    <span class="attendance-status">Ausente</span>
+                </div>
+                <div class="student-item">
+                    <span class="student-name">Jorge Martínez</span>
+                    <span class="attendance-status">Presente</span>
+                </div>
+                <div class="student-item">
+                    <span class="student-name">Lucía García</span>
+                    <span class="attendance-status">Ausente</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i> ¡Código QR generado correctamente!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
